@@ -30,7 +30,7 @@ const Main = () => {
     }
   };
   useEffect(() => {
-    if(navigator.geolocation){
+    if(navigator.geolocation.getCurrentPosition.length>0){
     navigator.geolocation.getCurrentPosition(function (position) {
       setLat(position.coords.latitude);
       setLon(position.coords.longitude);
