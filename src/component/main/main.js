@@ -23,7 +23,6 @@ const Main = () => {
         .then((response) => {
           setData(response.data);
           //   localStorage.setItem("data", JSON.stringify(data))
-          console.log(response.data);
         })
         .finally(() => {
           setLoading(false);
@@ -31,9 +30,15 @@ const Main = () => {
     }
   };
   useEffect(() => {
+
     navigator.geolocation.getCurrentPosition(function (position) {
+      if(position){
       setLat(position.coords.latitude);
       setLon(position.coords.longitude);
+      }
+      else{
+        alert("Please Access Location")
+      }
     });
   },[]);
   useEffect(()=>{
