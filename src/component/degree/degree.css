@@ -1,0 +1,22 @@
+.degree{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 42px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+.degree .deg h1{
+    font-size: 30px;
+    margin: 20px !important;}
+.degree .deg h3{
+    font-size: 30px;
+    margin: 0px;}
+.cloud{
+    font-size: 30px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}

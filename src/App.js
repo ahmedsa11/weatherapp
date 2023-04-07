@@ -1,8 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Main from "./component/main/main";
 function App() {
   return (
-    <>ad</>
+    <>
+      <Main />
+    </>
   );
 }
 

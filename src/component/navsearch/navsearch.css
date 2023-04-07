@@ -1,0 +1,18 @@
+.navsearch{
+    text-align: center;
+    z-index: 1;
+}
+.navsearch input{
+    padding: 10px 17px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: transparent;
+    color: #fff;
+}
+.navsearch input:focus{
+    outline: #fff !important
+}
+.navsearch ::placeholder {
+    color: #ddd ;
+  }

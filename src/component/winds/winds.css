@@ -1,0 +1,23 @@
+.winds{
+    width: fit-content;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    display: flex;
+    margin: 22px auto;
+    padding: 11px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 16px;
+}
+.winds .ww:not(:last-child){
+    border-right: 1px solid #ddd;
+}
+.winds .ww{
+    margin: 5px;
+}
+.winds .ww h3{
+    font-weight: bold;
+}
+.winds .ww p{
+    margin-right: 5px;
+}

@@ -1,0 +1,27 @@
+.main{
+    background-image: url("../../images/wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg");
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+.load{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+}
