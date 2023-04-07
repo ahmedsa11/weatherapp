@@ -14,7 +14,7 @@ const Main = () => {
 
   //   const temp=localStorage.getItem("data")
   //   const locuser=JSON.parse(temp);
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${Lat}&lon=${Lon}&q=${location}&units=imperial&appid=5109ea576bbbe7e9a59cdb7f3d460179`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${Lat}&lon=${Lon}&q=${location}&units=metric&appid=5109ea576bbbe7e9a59cdb7f3d460179`;
   const getWeather = (e) => {
     if (e.key === "Enter") {
       setLoading(true);

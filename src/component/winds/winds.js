@@ -5,7 +5,7 @@ const Winds = ({dataW}) => {
     <div className='winds'>
         <div className='ww'>
             <h3>{dataW&&dataW.main?dataW.main.feels_like:null}</h3>
-            <p>Feaals Like</p>
+            <p>Fees Like</p>
         </div>
         <div className='ww'>
             <h3>{dataW&&dataW.main?dataW.main.humidity:null}</h3>
