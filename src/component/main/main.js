@@ -30,16 +30,15 @@ const Main = () => {
     }
   };
   useEffect(() => {
-
+    if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function (position) {
-      if(position){
       setLat(position.coords.latitude);
       setLon(position.coords.longitude);
-      }
-      else{
-        alert("Please Access Location")
-      }
     });
+  }
+    else{
+      alert("Please Access Location")
+    }
   },[]);
   useEffect(()=>{
     setLoading(true);
