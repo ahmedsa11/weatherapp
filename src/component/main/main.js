@@ -30,28 +30,33 @@ const Main = () => {
     }
   };
   useEffect(() => {
-    if(navigator.geolocation.getCurrentPosition.length>0){
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLat(position.coords.latitude);
-      setLon(position.coords.longitude);
+    navigator.permissions.query({ name: "geolocation" }).then((result) => {
+      if (result.state === "denied") {
+        alert("Please Access Location");
+      } else {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          setLat(position.coords.latitude);
+          setLon(position.coords.longitude);
+        });
+      }
     });
-  }
-    else{
-      alert("Please Access Location")
-    }
-  },[]);
-  useEffect(()=>{
+
+    // else{
+    //   alert("Please Access Location")
+    // }
+  }, []);
+  useEffect(() => {
     setLoading(true);
     axios
-    .get(url)
-    .then((response) => {
-      setData(response.data);
-      console.log(response.data);
-    })
-    .finally(() => {
-      setLoading(false);
-    });
-  },[Lat,Lat])
+      .get(url)
+      .then((response) => {
+        setData(response.data);
+        console.log(response.data);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [Lat, Lat]);
   return (
     <>
       <div className="main">
